@@ -1,8 +1,13 @@
+import MainCont from "./components/MainCont"
+// import StartDisp from "./components/StartDisp"
+
 function App() {
 
   return (
     <>
-      Hej
+      {/* <StartDisp/> */}
+
+      <MainCont/>
     </>
   )
 }

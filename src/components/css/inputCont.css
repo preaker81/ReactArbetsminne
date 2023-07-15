@@ -1,0 +1,12 @@
+.inputCont {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2px; /* Adjust this value to give spacing between the buttons */
+  }
+
+  button{
+    height: 5rem;
+    border-radius: 2px;
+    background-color: #66bbdf;
+  }

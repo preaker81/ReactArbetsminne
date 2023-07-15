@@ -1,0 +1,9 @@
+.numberDisp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.numberDisp p{
+    font-size: 200px;
+}
