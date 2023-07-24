@@ -1,7 +1,13 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react-swc'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react-swc";
 
-// https://vitejs.dev/config/
+const repoBase =
+  process.env.NODE_ENV === "production" ? "/ReactArbetsminne/" : "/"; // Set the base URL according to the environment
+
 export default defineConfig({
   plugins: [react()],
-})
+  base: repoBase,
+  build: {
+    outDir: "docs",
+  },
+});
