@@ -1,7 +1,16 @@
-function StartDisp() {
+import PropTypes from 'prop-types';
+
+function StartDisp({ startGame }) {
   return (
-    <div>StartDisp</div>
+    <div>
+      <h1>Welcome to the Game!</h1>
+      <button onClick={startGame}>Start</button>
+    </div>
   )
 }
 
-export default StartDisp
+StartDisp.propTypes = {
+  startGame: PropTypes.func.isRequired,
+};
+
+export default StartDisp;

@@ -1,13 +1,19 @@
-import AnswerBtn from './AnswerBtn'
-import './css/inputCont.css'
+import PropTypes from "prop-types";
+import AnswerBtn from "./AnswerBtn";
+import "./css/inputCont.css";
 
-function InputCont() {
-
+function InputCont({ handleClick }) {
   return (
-    <div className='inputCont'>
-    {[...Array(10).keys()].map(i => <AnswerBtn key={i} value={i} />)}
+    <div className="inputCont">
+      {[...Array(10).keys()].map((i) => (
+        <AnswerBtn key={i} value={i} handleClick={handleClick} />
+      ))}
     </div>
-  )
+  );
 }
 
-export default InputCont
+InputCont.propTypes = {
+  handleClick: PropTypes.func.isRequired,
+};
+
+export default InputCont;

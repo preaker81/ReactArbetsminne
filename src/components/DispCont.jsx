@@ -1,14 +1,21 @@
-import NumberDisp from "./NumberDisp"
-import ResultDisp from "./ResultDisp"
-import './css/dispCont.css'
+import NumberDisp from "./NumberDisp";
+import ResultDisp from "./ResultDisp";
+import PropTypes from "prop-types";
+import "./css/dispCont.css";
 
-function DispCont() {
+function DispCont({ currentNumb, correctAnswer, wrongAnswer }) {
   return (
     <div className="dispCont">
-    <NumberDisp/>
-    <ResultDisp/>
+      <NumberDisp currentNumb={currentNumb} />
+      <ResultDisp correctAnswer={correctAnswer} wrongAnswer={wrongAnswer} />
     </div>
-  )
+  );
 }
 
-export default DispCont
+DispCont.propTypes = {
+  currentNumb: PropTypes.number.isRequired,
+  correctAnswer: PropTypes.number.isRequired,
+  wrongAnswer: PropTypes.number.isRequired,
+};
+
+export default DispCont;

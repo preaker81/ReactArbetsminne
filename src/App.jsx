@@ -1,13 +1,18 @@
+import { useState } from 'react';
 import MainCont from "./components/MainCont"
-// import StartDisp from "./components/StartDisp"
+import StartDisp from "./components/StartDisp"
 
 function App() {
+  const [gameStarted, setGameStarted] = useState(false);
+
+  const startGame = () => {
+    setGameStarted(true);
+  }
 
   return (
     <>
-      {/* <StartDisp/> */}
-
-      <MainCont/>
+      {!gameStarted && <StartDisp startGame={startGame} />}
+      {gameStarted && <MainCont />}
     </>
   )
 }

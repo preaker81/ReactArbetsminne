@@ -1,11 +1,16 @@
-import './css/numberDisp.css'
+import PropTypes from "prop-types";
+import "./css/numberDisp.css";
 
-function NumberDisp() {
+function NumberDisp({ currentNumb }) {
   return (
     <div className="numberDisp">
-        <p>0</p>
+      <p>{currentNumb}</p>
     </div>
-  )
+  );
 }
 
-export default NumberDisp
+NumberDisp.propTypes = {
+  currentNumb: PropTypes.number.isRequired,
+};
+
+export default NumberDisp;
